@@ -8,7 +8,7 @@ public class MyBeautifulTestSuite {
     
     @Verify
     public void testWillError() throws Exception {
-        //throw new Exception("this must fail");
+        throw new Exception("this must fail");
     }
 
     @VerifyLong(output={})
