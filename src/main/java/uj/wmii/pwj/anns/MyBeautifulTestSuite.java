@@ -60,8 +60,15 @@ Testing class: uj.wmii.pwj.anns.MyBeautifulTestSuite
     ERROR: empty output; use @Verify
 [ 2] testVerifyNoArgs
     PASS
-[ 3] testWillError
-    PASS
+java.lang.Exception: this must fail
+        at uj.wmii.pwj.anns.MyBeautifulTestSuite.testWillError(MyBeautifulTestSuite.java:11)
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+        at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+        at uj.wmii.pwj.anns.MyTestEngine.launchSingleMethod(MyTestEngine.java:103)
+        at uj.wmii.pwj.anns.MyTestEngine.runTests(MyTestEngine.java:77)
+        at uj.wmii.pwj.anns.MyTestEngine.main(MyTestEngine.java:43)
+[*3] testWillError
+    ERROR: unhandled exception: class java.lang.Exception
 [*4] testWillFailBecauseInconsistent
     ERROR: output length does not match input
 [ 5] testWillSucceedBecauseCorrect
@@ -73,9 +80,9 @@ Testing class: uj.wmii.pwj.anns.MyBeautifulTestSuite
 [ 8] testWithString
     PASS
 [===   Tests completed: 8
-[      PASS:            5
+[      PASS:            4
 [      FAIL:            1
-[      ERROR:           2
+[      ERROR:           3
     
     */
 }
